@@ -17,5 +17,4 @@ require('mongoose').connect(global.sistem.mongoURL, {
 
 client.fetchCommands()
 client.fetchEvents()
-client.fetchSettings(global.sistem.sunucuID)
 client.login(sistem.token).catch(err => { console.log("[TOKEN]: ARIZALI.")})

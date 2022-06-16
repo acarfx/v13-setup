@@ -1,26 +1,9 @@
 const { GuildMember, Guild, TextChannel, Message, MessageEmbed, ReactionCollector } = require("discord.js");
-const Webhooklar = {};
 const client = global.client;
 const Settings = require("../Main.Database/Global.Settings")
 
 GuildMember.prototype.rolTanımla = function (rolidler = []) {
     let rol = this.roles.cache.clone().filter(e => e.managed).map(e => e.id).concat(rolidler);
-    return this.roles.set(rol);
-}
-
-GuildMember.prototype.rolVer = function (rolidler = []) {
-    let rol = this.roles.cache.clone().filter(e => !e.managed).map(e => e.id).concat(rolidler);
-    return this.roles.add(rol);
-}
-
-
-GuildMember.prototype.kayıtRolVer = function (rolidler = []) {
-    let rol;
-    if(this.roles.cache.has(Data.vipRolü)) { 
-    rol = this.roles.cache.clone().filter(e => e.managed).map(e => e.id).concat(rolidler).concat(roller.vipRolü) 
-    } else {
-    rol = this.roles.cache.clone().filter(e => e.managed).map(e => e.id).concat(rolidler)
-    };
     return this.roles.set(rol);
 }
 

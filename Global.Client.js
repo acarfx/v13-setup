@@ -54,7 +54,6 @@ class acar extends Client {
             });
         });
     }
-
     async fetchEvents() {
         let dirs = fs.readdirSync("./Main.Events", { encoding: "utf8" });
         dirs.forEach(dir => {

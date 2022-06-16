@@ -29,8 +29,6 @@ module.exports = {
 
     onRequest: async function (client, message, args) {
       let fetchSettings = await message.guild.fetchSettings()
-
-      
       let seçim = args[0]
       if(!seçim) {
         let allSettings = new genEmbed()
@@ -50,7 +48,7 @@ module.exports = {
 
 **Üye Rolü**: ${fetchSettings.üyeRolü ? message.guild.roles.cache.get(fetchSettings.üyeRolü) ? message.guild.roles.cache.get(fetchSettings.üyeRolü) : `**\` Veri Tekrardan Girilmeli! \`**` : "**` Ayarlanmadı! `**"} (Bu ayarı değiştirmek için \`${sistem.prefix[0]}setup üyeRolü\` yazabilirsiniz.)
 `)
-        return message.channel.send({embeds: [allSettings], components: [row1]})
+        return message.channel.send({embeds: [allSettings]})
       }
       if(seçim == "taglıalım") {
         let tagliAlim = fetchSettings.taglıalım

@@ -20,7 +20,7 @@ let embed = new genEmbed()
   .setImage("URL")
   .setDescription("Content")
 
-// Otomatik olarak renk "RANDOM" olarak ayarlıdır.
+// Otomatik renk "RANDOM" olarak ayarlıdır.
 // Değiştirmek için .setColor("2F3236") şeklinde ekleyebilirsiniz.
 
 <TextChannel>.send({embeds: [embed}})

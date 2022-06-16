@@ -5,7 +5,7 @@ Not: **Bu projenin amacı anlık kurulum mantığını anlatmaktır.**
 
 #### Verileri Anlık Çekmek İçin Kullanılabilir (Async):
 ```js
-await <ClientGuild>.fetchSettings()
+await <Guild>.fetchSettings()
 ```
 
 ### genEmbed ne için var?

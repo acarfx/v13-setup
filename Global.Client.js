@@ -19,6 +19,7 @@ class acar extends Client {
         this.on("ready", () => { 
             this.guilds.cache.map(guild => {
                guild.members.fetch()
+               this.fetchSettings(guild.id)
             })
             console.log(`${this.user.tag} Botu Aktif!`)
         })
@@ -35,11 +36,9 @@ class acar extends Client {
         let Data = await Settings.findOne({guildID: guildID})
         if(!Data) {
           await Settings.updateOne({guildID: guildID}, {$set: {"updated": Date.now()}}, {upsert: true});
-          global.Data = Data
           console.log(`[SETTINGS] "${guildID}" idsine sahip sunucu için ayarlar oluşturuldu.`);
         } else {
-            global.Data = Data
-            console.log(`[SETTINGS] "${guildID}" idsine sahip sunucu için ayarlar yüklendi.`);
+          console.log(`[SETTINGS] "${guildID}" idsine sahip sunucu için ayarlar yüklendi.`);
         }
     }
     async fetchCommands() {

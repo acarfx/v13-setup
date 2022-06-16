@@ -16,7 +16,12 @@ class acar extends Client {
         require('./Main.Init/Dates')
         require('./Main.Init/Utils')
 
-        this.on("ready", () => { console.log(`${client.user.username} bot aktif.`) })
+        this.on("ready", () => { 
+            this.guilds.cache.map(guild => {
+               guild.members.fetch()
+            })
+            console.log(`${this.user.tag} Botu Aktif!`)
+        })
         
     }
 

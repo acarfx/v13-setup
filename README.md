@@ -3,7 +3,7 @@
 
 Not: **Bu projenin amacı anlık kurulum mantığını anlatmaktır.**
 
-#### Verileri Anlık Çekmek İçin Kullanılabilir:
+#### Verileri Anlık Çekmek İçin Kullanılabilir (Async):
 ```js
 await <ClientGuild>.fetchSettings()
 ```
